@@ -53,22 +53,22 @@ int command_call(sample_type *func_data)
 {
 	int x, output = -1;
 	function_table command_table[] = {
-	{"exit", ss_exit},
-	{"env", ss_env},
-	{"help", ss_help},
-	{"history", ss_history},
-	{"setenv", ss_add_env},
-	{"unsetenv", ss_remove_env},
-	{"cd", ss_cd},
-	{"alias", ss_alias},
-	{NULL, NULL}
+		{"exit", ss_exit},
+		{"env", ss_env},
+		{"help", ss_help},
+		{"history", ss_history},
+		{"setenv", ss_add_env},
+		{"unsetenv", ss_remove_env},
+		{"cd", ss_cd},
+		{"alias", ss_alias},
+		{NULL, NULL}
 	};
 
 	for (x = 0; command_table[x]. flag_name; x++)
 		if (string_compare(func_data->argv[0], command_table[x].flag_name) == 0)
 	{
 	func_data->counter_row++;
-	output = command_table[x].func_name(func_data);
+	output = command_table[x].flag_name(func_data);
 	break;
 	}
 	return (output);
@@ -135,7 +135,7 @@ void fork_command(sample_type *func_data)
 	}
 	if (child_pid == 0)
 	{
-		if (execve(func_data->path, func_data->argv, get_environ(info)) == -1)
+		if (execve(func_data->path, func_data->argv, get_environ(func_data)) == -1)
 		{
 			remove_func_data(func_data, 1);
 			if (errno == EACCES)

@@ -18,7 +18,7 @@ linked_list *add_node_start(linked_list **head, const char *str, int n)
 	if (!new_head)
 		return (NULL);
 	alocate_memory((void *)new_head, 0, sizeof(linked_list));
-	new_head->n = n;
+	new_head->num = n;
 	if (str)
 	{
 		new_head->ns = string_duplicate(str);
@@ -52,7 +52,7 @@ linked_list *add_node_end(linked_list **head, const char *str, int n)
 	if (!new_node)
 		return (NULL);
 	alocate_memory((void *)new_node, 0, sizeof(linked_list));
-	new_node->n = n;
+	new_node->num = n;
 	if (str)
 	{
 		new_node->ns = string_duplicate(str);

@@ -48,7 +48,7 @@ int print_alias(linked_list *x)
 		ptr = _strchr(x->ns, '=');
 		for (c = x->ns; c <= ptr; c++)
 		_putchar(*c);
-		_putchar("/");
+		_putchar('/');
 		_puts(ptr + 1);
 		_puts("\n");
 		return (0);

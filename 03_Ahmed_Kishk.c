@@ -106,16 +106,16 @@ int change_ss_alias(sample_type *func_data)
 
 int change_ss_vars(sample_type *func_data)
 {
-	int z = 0;
+	int z;
 	linked_list *x;
 
-	for (i = 0; func_data->argv[z]; i++)
+	for (z = 0; func_data->argv[z]; z++)
 	{
 		if (func_data->argv[z][0] != '$' || !func_data->argv[z][1])
 			continue;
 		if (!string_compare(func_data->argv[z], "$?"))
 		{
-			change_string($(func_data->argv[z]),
+			change_string(&(func_data->argv[z]),
 					string_duplicate(number_to_string(func_data->feedback, 10, 0)));
 			continue;
 		}

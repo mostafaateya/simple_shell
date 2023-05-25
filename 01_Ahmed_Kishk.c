@@ -9,7 +9,6 @@
 int _atoi(char *digit)
 {
 	int z, negative = 1, i = 0, output;
-	int i = 0;
 	unsigned int out = 0;
 
 	for (z = 0; digit[z] != '\0' && i != 2; z++)

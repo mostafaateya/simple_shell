@@ -47,17 +47,17 @@ void *_realloc(void *ptr, unsigned int old_block, unsigned int new_block)
 	char *c;
 
 	if (!ptr)
-		return (malloc(new_ block));
-	if (!new_ block)
+		return (malloc(new_block));
+	if (!new_block)
 		return (free(ptr), NULL);
-	if (new_ block == old_block)
+	if (new_block == old_block)
 		return (ptr);
-	c = malloc(new_ block);
+	c = malloc(new_block);
 	if (!c)
 		return (NULL);
-	old_block = old_block < new_ block ? old_block : new_ block;
+	old_block = old_block < new_block ? old_block : new_block;
 	while (old_block--)
-		p[old_block] = ((char *)ptr)[old_block];
+		c[old_block] = ((char *)ptr)[old_block];
 	free(ptr);
 	return (c);
 }
