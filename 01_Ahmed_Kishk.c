@@ -6,7 +6,7 @@
  * Return: 0 if no numbers in string, converted number otherwise
  */
 
-/*int _atoi(char *digit)
+int _atoi(char *digit)
 {
 	int z, negative = 1, i = 0, output;
 	unsigned int out = 0;
@@ -29,7 +29,7 @@
 	else
 		output = out;
 	return (output);
-}*/
+}
 
 /**
  * _isalpha - checks for alphabetic character
@@ -37,13 +37,13 @@
  * Return: 1 if c is alphabetic, 0 otherwise
  */
 
-/*int _isalpha(int c)
+int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
-}*/
+}
 
 /**
  * _isdeterm - checks if character is a specified
