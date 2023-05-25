@@ -198,7 +198,7 @@ char **string_split_2(char *, char *);
 char **string_split(char *, char);
 
 int chaining_delimeter(sample_type *, char *, size_t *);
-void chaining_continue(sample_type *, char *, size_t, size_t, size_t);
+void chaining_continue(sample_type *, char *, size_t *, size_t, size_t);
 int change_ss_alias(sample_type *);
 int change_ss_vars(sample_type *);
 int change_string(char **, char *);
