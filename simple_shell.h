@@ -101,8 +101,8 @@ typedef struct func_call
 	int (*func_name)(sample_type *);
 } function_table;
 
-int _atoi(char *);
-int _isalpha(int);
+//int _atoi(char *);
+//int _isalpha(int);
 int _isdeterm(char, char *);
 int play(sample_type *);
 
