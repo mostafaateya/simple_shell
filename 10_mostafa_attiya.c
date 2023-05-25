@@ -2,7 +2,7 @@
 
 /**
  * linked_list_length - determines length of linked list
- * @h: pointer to first node
+ * @n: pointer to first node
  * Return: length of linked list
  */
 

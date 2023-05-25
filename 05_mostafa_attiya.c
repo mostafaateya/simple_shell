@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- *  _stncpy - copies a string
+ *  _strncpy - copies a string
  *  @dest: destination string
  *  @src: source string
  *  @n: number of characters to be copied
