@@ -46,18 +46,6 @@ typedef struct sll
 } linked_list;
 
 /**
- * struct func_call - contains a function string and related function
- * @flag_name: the builtin command flag
- * @func_name: the function
- */
-
-typedef struct func_call
-{
-	char *flag_name;
-	int (*func_name)(sample_type *);
-} function_table;
-
-/**
  * struct info_shape - data model for functions
  * @s_cmd: string of arguments from getline function
  * @argv: array of strings from s_cmd
@@ -100,6 +88,18 @@ typedef struct info_shape
 	int fd_read;
 	int history_counter_row;
 } sample_type;
+
+/**
+ * struct func_call - contains a function string and related function
+ * @flag_name: the builtin command flag
+ * @func_name: the function
+ */
+
+typedef struct func_call
+{
+	char *flag_name;
+	int (*func_name)(sample_type *);
+} function_table;
 
 int _atoi(char *);
 int _isalpha(int);
