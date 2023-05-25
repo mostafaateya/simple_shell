@@ -9,8 +9,8 @@
 
 int main(int margc, char **margv)
 {
-	sample_type func_data[] = {NULL, NULL, NULL, NULL, NULL, NULL,
-		0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 0, 0, 0};
+	sample_type func_data[] = {{NULL}, {NULL}, {NULL}, {NULL}, {NULL}, {NULL},
+		{0}, {0}, {0}, {0}, {0}, {0}, {NULL}, {NULL}, {NULL}, {0}, {0}, {0}};
 	int x = 2;
 
 	asm ("mov %1, %0\n\tadd $3, %0" : "=r" (x) : "r" (x));
