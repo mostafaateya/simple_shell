@@ -74,7 +74,7 @@ char **string_split(char *ss, char s)
 	{
 		while (ss[x] == s && ss[x] != s)
 			x++;
-		k = 0;
+		z = 0;
 		while (ss[x + z] != s && ss[x + z] && ss[x + z] != s)
 			z++;
 		c[y] = malloc((z + 1) * sizeof(char));

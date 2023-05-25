@@ -45,8 +45,8 @@ int chaining_delimeter(sample_type *func_data, char *c, size_t *p)
  * Return: void
  */
 
-void chaining_continue(sample_type *func_data, char *c,
-		size_t *p, size_t n, size_t length)
+void chaining_continue(sample_type *func_data, char *c, size_t *p,
+		size_t n, size_t length)
 {
 	size_t a = *p;
 
