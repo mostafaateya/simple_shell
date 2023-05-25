@@ -66,11 +66,11 @@ int command_call(sample_type *func_data)
 
 	for (x = 0; command_table[x]. flag_name; x++)
 		if (string_compare(func_data->argv[0], command_table[x].flag_name) == 0)
-	{
-	func_data->counter_row++;
-	output = command_table[x].func_name(func_data);
-	break;
-	}
+		{
+			func_data->counter_row++;
+			output = command_table[x].func_name(func_data);
+			break;
+		}
 	return (output);
 }
 
